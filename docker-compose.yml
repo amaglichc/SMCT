@@ -1,0 +1,7 @@
+services:
+  backend:
+  mongodb:
+  mongo_express:
+  postgres:
+  frontend:
+  redis:
