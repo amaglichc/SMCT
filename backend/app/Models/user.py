@@ -12,7 +12,7 @@ class RoleEnum(Enum):
 
 class SignUpUser(BaseModel):
     name: str = Field(min_length=3, max_length=20)
-    surname: str = Field(min_length=3, max_length=20)
+    surname: str | None = Field(min_length=3, max_length=20)
     email: EmailStr = Field(min_length=6, max_length=20)
     password: str = Field(min_length=8, max_length=25)
 
@@ -25,7 +25,7 @@ class SignInUser(BaseModel):
 class User(BaseModel):
     id: str
     name: str
-    surname: str
+    surname: str | None
     email: str
     password: str
     created_at: datetime
